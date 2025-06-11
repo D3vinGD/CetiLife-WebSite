@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    --background: #f2c0ba;
+    --secondary-dark: #5070ff;
+    --secondary: #50c8ff;
+    --secondary-light: #50ffdf;
+    --primary: #ff8750;
+    --primary-light: #ffede3; 
+    --textColor: #041626;
+    --titleColor: #042625; 
+
+    font-family: Nunito;
+    color: var(--textColor);
+
+    height: 200vh;
+}

@@ -1,0 +1,97 @@
+.header{
+    background-color: var(--primary);
+    background-image: 
+        linear-gradient(to right,
+            var(--primary),
+            var(--secondary-dark));
+    position: sticky;
+    top: 0;
+    margin-bottom: 40px;
+}
+
+.header__nav-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+
+    
+}
+.header__nav-item{
+    list-style: none;
+    position: relative;
+}
+.header__nav-item a{
+    display: inline-block;
+    padding: 20px 30px;
+    text-decoration: none;
+    color: var(--primary-light);
+    font-weight: 700;
+
+}
+.header__nav-logo{
+    width: 100%;
+    height: 100%;
+}
+.header__nav-item:has(.header__nav-logo){
+    margin-right: 30px;
+}
+.header__nav-item:has(.header__nav-logo):hover{
+    filter: drop-shadow(
+        0 0 10px var(--secondary)
+    );
+}
+.header__nav-item:has(.header__nav-logo){
+    width: clamp(20px,10%,50px);
+    height: clamp(20px,10%,50px);
+
+    
+}
+a:has(.header__nav-logo){
+    padding: 0;
+}
+.rightside{
+    margin-left: auto;
+}
+
+.header__nav-link:not(:has(.header__nav-logo)):hover{
+    background-color: var(--primary-light);
+    color: var(--primary);
+    
+}
+.leftside-link::before{
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+
+    z-index: 10;
+    height: 3px;
+    width: 10%;
+    background-color: transparent;
+
+    transition: all 0.4s;
+}
+.leftside-link:hover::before{
+    width: 100%;
+    background-color: #0007;
+}
+
+.header__nav-item .ingresar-btn,.header__nav-item .registrarse-btn{
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    
+}
+.header__nav-item .ingresar-btn{
+    background-color: var(--secondary);
+    color: color-mix(in srgb, var(--secondary) , black);
+}
+.header__nav-item .registrarse-btn{
+    background-color: var(--secondary-light);
+    color: color-mix(in srgb, var(--secondary) , black);
+    
+}
