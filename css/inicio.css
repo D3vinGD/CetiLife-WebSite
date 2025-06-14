@@ -1,0 +1,146 @@
+body{
+    background-color: var(--background);
+    color: color-mix(in srgb, var(--secondary-light) , #fff 80%);
+}
+.main{
+    
+    font-size: 1.5rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    gap: 10rem;
+    border-radius: 30px;
+    background-image: 
+        linear-gradient(
+            to bottom, 
+            #fff3,
+            #0003
+        );
+    
+}
+.CetiColomos{
+    
+    display: grid;
+    grid-template-columns: 25rem 1fr;
+    grid-template-rows: 1fr;
+
+    row-gap: 30px;
+    
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #0005;
+    background-image: linear-gradient(to bottom right, #ffffff20, #00000020);
+}
+.main .CetiColomos h1{
+    filter: drop-shadow(0 0 10px #fff);
+    grid-column: span 2;
+    justify-self: center;
+    font-size: 5rem;
+    
+    border-bottom: 3px solid #fff;
+}
+.main .CetiColomos p{
+    
+    margin: 3rem 30px;
+    
+    padding: 2rem 3rem;
+
+    grid-row: 2;
+    grid-column: 2;
+    
+    border-left: 3px solid #fffa;
+    background-image: linear-gradient(to right, #fff5, 1% , transparent);
+}
+.main .CetiColomos img{
+    grid-column: 1;
+    align-self: center;
+
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+    overflow: hidden;
+    border-radius: 20px;
+    filter: drop-shadow(
+        0 0 100px var(--background)
+    );
+}
+.Ubicacion{
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #0005;
+    background-image: linear-gradient(to bottom right, #ffffff20, #00000020);
+}
+.Ubicacion h2{
+    filter: drop-shadow(0 0 10px #fff);
+    font-size: 4rem;
+}
+.Ubicacion img{
+    margin-top: 3rem;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 1rem;
+    border-right: 5px solid #fff;
+    border-left: 5px solid #fff;
+}
+.Ubicacion p{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.ofertaAcademica {
+    margin-top: 5rem;
+    padding: 3rem;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom right, #ffffff20, #00000020);
+    box-shadow: 0 0 30px #0005;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.ofertaAcademica h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    filter: drop-shadow(0 0 10px #fff);
+    border-bottom: 3px solid #fff5;
+    padding-bottom: 1rem;
+}
+
+.ofertaAcademica .tecnologo,
+.ofertaAcademica .ingeniería {
+    background-color: #ffffff0a;
+    border-left: 5px solid var(--secondary-light);
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #0003;
+}
+
+.ofertaAcademica h3 {
+    font-size: 2rem;
+    color: color-mix(in srgb, var(--secondary-light), #fff 80%);
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 5px #fff8);
+}
+
+.ofertaAcademica h4 {
+    font-size: 1.5rem;
+    color: var(--secondary-light);
+    margin-top: 2rem;
+    border-bottom: 2px solid #fff4;
+    padding-bottom: 0.5rem;
+}
+
+.ofertaAcademica ul {
+    margin-top: 1rem;
+    padding-left: 2rem;
+    list-style: square;
+    color: color-mix(in srgb, var(--secondary-light), #fff 90%);
+}
+
+.ofertaAcademica li {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    line-height: 1.6;
+}

@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CetiLife - Foro</title>
     <link rel="stylesheet" href="css/setup.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/foro.css">
 </head>
+
 <body>
     <header class="header">
         <nav class="header__nav">
@@ -37,6 +41,82 @@
             </ul>
         </nav>
     </header>
-    
+
+    <section class="events forum">
+        <div class="events__wrapper">
+
+            <!-- Formulario para publicar nueva pregunta -->
+            <article class="foro">
+                <h2 class="foro__title">Publicar nueva pregunta</h2>
+                <form class="foro__description" action="/publicar" method="post">
+                    
+                    <div style="margin-bottom: 1rem;">
+                        <label for="titulo">Título de la pregunta:</label><br>
+                        <input type="text" id="titulo" name="titulo" required>
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <label for="contenido">Contenido:</label><br>
+                        <textarea id="contenido" name="contenido" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit">
+                        Publicar
+                    </button>
+                </form>
+            </article>
+
+            <!-- Pregunta 1 -->
+            <article class="foro question">
+                <h2 class="foro__title">¿Cómo integrar color-mix en navegadores antiguos?</h2>
+                <p class="foro__info">Publicado por Juan Pérez — 10 de junio de 2025</p>
+                <div class="foro__description">
+                    Estoy intentando usar <code>color-mix()</code> en mi proyecto, pero no se ve bien en algunos
+                    navegadores. ¿Cómo puedo asegurar compatibilidad o aplicar un fallback?
+                </div>
+            </article>
+
+            <!-- Respuestas a Pregunta 1 -->
+            <article class="foro answer">
+                <h2 class="foro__title">Respuesta de Ana López</h2>
+                <p class="foro__info">Respondido — 10 de junio de 2025</p>
+                <div class="foro__description">
+                    Puedes usar una propiedad de respaldo antes de `color-mix()` en tu CSS. Por ejemplo:<br><br>
+                    <code>background-color: #ccc;</code><br>
+                    <code>background-color: color-mix(...);</code><br><br>
+                    Así, los navegadores que no soporten `color-mix` usarán el primer valor.
+                </div>
+            </article>
+
+            <!-- Formulario de respuesta a Pregunta 1 -->
+            <article class="foro">
+                <h2 class="foro__title">Responder a esta pregunta</h2>
+                <form class="foro__description" action="/responder" method="post">
+                    <input type="hidden" name="id_pregunta" value="1">
+
+                    <div style="margin-bottom: 1rem;">
+                        <label for="nombre1">Nombre:</label><br>
+                        <input type="text" id="nombre1" name="nombre" required>
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <label for="respuesta1">Tu respuesta:</label><br>
+                        <textarea id="respuesta1" name="respuesta" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit">Enviar respuesta</button>
+                </form>
+            </article>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__content">
+            pagina hecha por devinasio el capo - Copyright@ mis huevos
+        </div>
+    </footer>
+
 </body>
+
 </html>

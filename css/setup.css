@@ -3,19 +3,21 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    scroll-behavior: smooth;
 }
 body{
-    --background: #f2c0ba;
+    --background: #131644;
     --secondary-dark: #5070ff;
     --secondary: #50c8ff;
     --secondary-light: #50ffdf;
     --primary: #ff8750;
     --primary-light: #ffede3; 
+    --primary-dark : #e7431a; 
     --textColor: #041626;
     --titleColor: #042625; 
 
     font-family: Nunito;
     color: var(--textColor);
 
-    height: 200vh;
+    min-height: 200vh;
 }
