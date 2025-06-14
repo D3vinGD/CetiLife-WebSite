@@ -30,7 +30,7 @@ body{
     padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 0 30px #0005;
-    background-image: linear-gradient(to bottom right, #ffffff20, #00000020);
+    background-image: linear-gradient(to bottom right, var(--cardBackgroundP), #fff2);
 }
 .main .CetiColomos h1{
     filter: drop-shadow(0 0 10px #fff);
@@ -70,7 +70,7 @@ body{
     padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 0 30px #0005;
-    background-image: linear-gradient(to bottom right, #ffffff20, #00000020);
+    background-image: linear-gradient(to bottom right, var(--cardBackgroundS), #00000020);
 }
 .Ubicacion h2{
     filter: drop-shadow(0 0 10px #fff);
@@ -93,7 +93,7 @@ body{
     margin-top: 5rem;
     padding: 3rem;
     border-radius: 20px;
-    background-image: linear-gradient(to bottom right, #ffffff20, #00000020);
+    background-image: linear-gradient(to bottom right, var(--cardBackgroundP), var(--cardBackgroundS));
     box-shadow: 0 0 30px #0005;
     display: flex;
     flex-direction: column;

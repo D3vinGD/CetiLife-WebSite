@@ -1,0 +1,53 @@
+body{
+    
+    background-color: var(--background);
+
+}
+.About {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+    height: 100vh;
+}
+
+.About__title {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    color: var(--primary-dark);
+}
+
+.About__subtitle {
+    font-size: 2rem;
+    margin-top: 3rem;
+    color: var(--secondary-dark);
+}
+
+.About__content {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    background-color: var(--cardBackgroundP);
+    color: var(--primary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.About__equipo {
+    margin-top: 1.5rem;
+    background-color: var(--cardBackgroundS);
+    color: var(--secondary);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+}
+
+.equipo__lista {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.equipo__lista li {
+    padding: 0.3rem 0;
+}

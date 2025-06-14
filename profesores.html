@@ -6,9 +6,11 @@
     <title>CetiLife - Profesores</title>
     <link rel="stylesheet" href="css/setup.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/profesores.css">
 </head>
 <body>
-    
+    <script src="js/puntuarProfesor.js"></script>
     <header class="header">
         <nav class="header__nav">
             <ul class="header__nav-list">
@@ -38,96 +40,180 @@
             </ul>
         </nav>
     </header>
+    <div class="profesores__title">
+                <h1>Profesores</h1>
+    </div>
+    <div class="contenedor-principal">
+        <main class="profesores">
+            
+            <div class="profesores__wrapper">
+                <div class="profesor-row">
 
-    <main class="profesores">
-        <div class="profesores__title">
-            <h1>Profesores</h1>
-        </div>
-        <div class="profesores__wrapper">
-            <div class="profesor">
-                <img src="" alt="profesor x" class="profesor__img">
-                <h2 class="profesor__nombre">profe 1</h3>
-                <p class="profesor__description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex nesciunt molestiae id eius autem commodi nisi eos molestias error, voluptatibus, facilis dicta accusamus eligendi quasi unde assumenda magnam? Vel!</p>
-                <div class="profesor__stats">
-                    <div class="stat">
-                        <h5 class="stat__name">Aprendizaje</h5>
-                        <div class="stat__Aprendizaje">
-                            <div class="stat__bar bar-x%"></div>
-                        </div>
-                    </div>
-                    <div class="stat">
-                        <h5 class="stat__name">Dificultad</h5>
-                        <div class="stat__Dificultad">
-                            <div class="stat__bar bar-x%"></div>
-                        </div>
-                    </div>
-                    <div class="stat">
-                        <h5 class="stat__name">Comprension</h5>
-                        <div class="stat__Aprendizaje">
-                            <div class="stat__bar bar-x%"></div>
-                        </div>
-                    </div>
-                </div>
-                <details class="coments">
-                    <summary class="coments__summary">Comentarios</summary>
-                    <div class="coment">
-                        <h3 class="coment__title">Pinche profe madreado</h3>
-                        <h4 class="coment__user">Juanito</h4>
-                        <h5 class="coment__date">1/02/25</h5>
-                        <p class="coment__content">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ad magni iste numquam eligendi debitis, earum tempore. Deleniti rerum assumenda
+                    <!-- Columna izquierda: Información del profesor -->
+                    <div class="profesor__info">
+                        <img src="resources/profesor1.webp" alt="Profesor 1" class="profesor__img">
+                        <h2 class="profesor__nombre">Profe 1</h2>
+                        <p class="profesor__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex nesciunt molestiae id eius autem commodi nisi eos molestias.
                         </p>
+                        <div class="profesor__stats">
+                            <div class="stat">
+                            <h5 class="stat__name">Aprendizaje</h5>
+                            <div class="stat__Aprendizaje">
+                                <div class="stat__bar" style="width: 80%;"></div>
+                            </div>
+                            </div>
+                            <div class="stat">
+                            <h5 class="stat__name">Dificultad</h5>
+                            <div class="stat__Dificultad">
+                                <div class="stat__bar" style="width: 40%;"></div>
+                            </div>
+                            </div>
+                            <div class="stat">
+                            <h5 class="stat__name">Comprensión</h5>
+                            <div class="stat__Comprension">
+                                <div class="stat__bar" style="width: 70%;"></div>
+                            </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Botón para mostrar/ocultar el formulario -->
+                        <button class="btn-puntuar" onclick="toggleFormulario(this)">Puntuar</button>
+
+                        <!-- Formulario compacto -->
+                        <form class="formulario-puntuar oculto">
+                            <div class="formulario__grid">
+                                <!-- Sliders -->
+                                <div class="formulario__sliders">
+                                <label>
+                                    Aprendizaje:
+                                    <input  class= "formulario__slider" type="range" name="aprendizaje" min="0" max="100" value="50">
+                                </label>
+                                <label>
+                                    Dificultad:
+                                    <input class= "formulario__slider" type="range" name="dificultad" min="0" max="100" value="50">
+                                </label>
+                                <label>
+                                    Comprensión:
+                                    <input class= "formulario__slider" type="range" name="comprension" min="0" max="100" value="50">
+                                </label>
+                                </div>
+
+                                <!-- Texto -->
+                                <div class="formulario__textos">
+                                <label>
+                                    Título del comentario:
+                                    <input class="formulario__input" type="text" name="titulo" placeholder="Ej. Profe buena onda">
+                                </label>
+                                <label>
+                                    Comentario:
+                                    <textarea class = "formulario__textarea" name="comentario" placeholder="Escribe tu experiencia..."></textarea>
+                                </label>
+                                <button type="submit" class="formulario__enviar">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </details>
 
+                    <!-- Columna derecha: Comentarios -->
+                    <div class="profesor__comentarios">
+                    <details class="coments" open>
+                        <summary class="coments__summary">Comentarios</summary>
+                        <div class="coments__list">
+                        <div class="coment">
+                            <div class="coment__header">
+                            <h3 class="coment__title">Profe muy relajado</h3>
+                            <div class="coment__meta">
+                                <span class="coment__user">Juanito</span> • 
+                                <span class="coment__date">1/02/25</span>
+                            </div>
+                            </div>
+                            <p class="coment__content">
+                            El profe explica bien pero nunca revisa tareas jaja, si le caes bien te pasa.
+                            </p>
+                        </div>
+                        <div class="coment">
+                            <div class="coment__header">
+                            <h3 class="coment__title">Mucho que estudiar</h3>
+                            <div class="coment__meta">
+                                <span class="coment__user">Ana</span> • 
+                                <span class="coment__date">3/02/25</span>
+                            </div>
+                            </div>
+                            <p class="coment__content">
+                            Me gustó su clase pero sí deja bastantito para leer.
+                            </p>
+                        </div>
+                        </div>
+                    </details>
+                    </div>
+
+                </div>
             </div>
+        </main>
+
+        <aside class="aside">
+            <div class="aside__wrapper">
+                <div class="aside__buscador">
+
+                    <input type="submit" value="Find" class="aside__buscador-bttn">
+                    
+                    <input type="text" class="aside__buscador-input" placeholder="Nombre Maestro">
+                    
+                    <div class="filter">
+                        
+                        <ul class="filter__list">
+                            <label >
+                                <li class="filter__list-item">Ciencias Basicas<input type="checkbox" value="" class="filter__list-input"></li>
+                            </label>
+                            
+                            <label >
+                                <li class="filter__list-item">Ciencias Sociales<input type="checkbox" value="" class="filter__list-input"></li>
+                            </label>
+                            
+                            <label>
+                                <li class="filter__list-item">Economico Administrativas<input type="checkbox" value="" class="filter__list-input"></li>
+                            </label>
+                            
+                            <label >
+                                <li class="filter__list-item">Lenguas Extranjeras<input type="checkbox" value="" class="filter__list-input"></li>    
+                            </label>
+                            
+                            <label>
+                                <li class="filter__list-item">Gestion de Proyectos TI<input type="checkbox" value="" class="filter__list-input"></li>
+                            </label>
+                            
+                            <label>
+                                <li class="filter__list-item">Programacion Aplicada<input type="checkbox" value="" class="filter__list-input"></li>
+                            </label>
+                            
+                            <label>
+                                <li class="filter__list-item">Internet de las cosas<input type="checkbox" value="mecatronica" class="filter__list-input"></li>
+                            </label>
+                            
+                            <label>
+                                <li class="filter__list-item">Desarrollo de aplicaciones<input type="checkbox" value="mecatronica" class="filter__list-input"></li>
+                            </label>
+                            
+                            <label>
+                                <li class="filter__list-item">Area Especializante<input type="checkbox" value="mecatronica" class="filter__list-input"></li>
+                            </label>
+                            
+                        </ul>
+                    </div>
+
+                </div>
+                
+            </div>
+        </aside>
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__content">
+            pagina hecha por estudiantes del Ceti - proyecto de 4to
         </div>
-    </main>
-
-    <aside class="aside">
-        <div class="aside__wrapper">
-            <div class="aside__buscador">
-                <input type="text" class="aside__buscador-input">
-                <input type="submit" value="Find" class="aside__buscador-bttn">
-                <input type="checkbox" value="Filtre" class="aside__buscador-filter">
-                <div class="filter">
-                    <ul class="filter__list">
-                        <li class="filter__list-item"><input type="checkbox" value="ingenieria" class="filter__list-input"></li>
-
-                        <li class="filter__list-item"><input type="checkbox" value="tecnologo" class="filter__list-input"></li>
-
-                        <li class="filter__list-item"><input type="checkbox" value="software" class="filter__list-input"></li>
-
-                        <li class="filter__list-item"><input type="checkbox" value="civil" class="filter__list-input"></li>
-
-                        <li class="filter__list-item"><input type="checkbox" value="mecatronica" class="filter__list-input"></li>
-                    </ul>
-                </div>
-
-            </div>
-            <div class="aside__resultados">
-                <div class="resultado">
-                    <img src="" alt="resultado__img">
-                    <div class="resultado__nombre">ProfeXD</div>
-                </div>
-                <div class="resultado">
-                    <img src="" alt="resultado__img">
-                    <div class="resultado__nombre">Profe Juan</div>
-                </div>
-                <div class="resultado">
-                    <img src="" alt="resultado__img">
-                    <div class="resultado__nombre">Profe Mario</div>
-                </div>
-                <div class="resultado">
-                    <img src="" alt="resultado__img">
-                    <div class="resultado__nombre">Profe Alexis</div>
-                </div>
-                <div class="resultado">
-                    <img src="" alt="resultado__img">
-                    <div class="resultado__nombre">Profe Julio</div>
-                </div>
-            </div>
-        </div>
-    </aside>
+    </footer>
 </body>
 </html>

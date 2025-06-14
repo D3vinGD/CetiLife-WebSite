@@ -12,10 +12,10 @@ body{
     color: var(--primary-light);
     width: 50%;
     margin: auto;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items:center;
-    height: 80dvh;
 } 
 .events__title h1{
     border-bottom: 8px solid #0005;

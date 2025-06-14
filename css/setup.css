@@ -16,8 +16,13 @@ body{
     --textColor: #041626;
     --titleColor: #042625; 
 
+    --cardBackgroundP: #ff875020;
+    --cardBackgroundS: #50c8ff20;
+
+    --highlight: #fff;
+    --accent: #007acc;
+
     font-family: Nunito;
     color: var(--textColor);
 
-    min-height: 200vh;
 }
